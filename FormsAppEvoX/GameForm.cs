@@ -28,7 +28,6 @@ namespace FormsAppEvoX
 
         public GameForm(string game)
         {
-            //Form1.games_list;
             InitializeComponent();
 
             label1.Text = game;
@@ -52,11 +51,11 @@ namespace FormsAppEvoX
             }
 
 
-            for (int i = 0; i < Form1.games_list.Count; i++)
+            foreach (var gameFromList in Form1.games_list)
             {
-                if (Form1.games_list[i].name == game)
+                if (gameFromList.name == game)
                 {
-                    game1 = Form1.games_list[i];
+                    game1 = gameFromList;
                     labelPrice.Text = game1.price.ToString() + " руб.";
                 }
             }
@@ -86,87 +85,63 @@ namespace FormsAppEvoX
 
             if (game ==  "Dirt 2.0")
             {
-                //labelPromoter.Text = "ИЗДАТЕЛЬ: Codemasters";
                 label2.Text = "Дата выхода: 2019";
             }
 
-           
-           
-
-
-
             if (game == "Red Dead Redemption 2")
             {
-                //labelPromoter.Text = "ИЗДАТЕЛЬ: Rockstar Games";
                 label2.Text = "Дата выхода 5 Дек. 2019";
             }
 
             if (game == "Rust")
             {
-                
-                //labelPromoter.Text = "ИЗДАТЕЛЬ: Facepunch Studios";
                 label2.Text = "Дата выходa 8 фев. 2018";
             }
 
             if (game == "GTA V")
             {
-               
-                //labelDeveloper.Text = "РАЗРАБОТЧИК: Rockstar North";
-                //labelPromoter.Text = "ИЗДАТЕЛЬ: Rockstar Games";
                 label2.Text = "Дата выхода 14 апр. 2015";
             }
 
             if (game == "Destiny")
             {
-                //labelPromoter.Text = "Издатель: Activision";
                 label2.Text = "Дата выхода: 10 ноя. 2020";
             }
 
             if (game == "CS GO")
             {
-                //labelPromoter.Text = "ИЗДАТЕЛЬ:Valve";
                 label2.Text = "ДАТА ВЫХОДА: 21 авг. 2012";
             }
             if (game == "Mortal Kombat")
             {
-                //labelPromoter.Text = "ИЗДАТЕЛЬ:  Warner Bros Interactive Entertainment";
                 label2.Text = "Дата выхода 23 апр. 2019";
             }
             if (game == "Forza")
             {
-                //labelPromoter.Text = "ИЗДАТЕЛЬ:  Playground Games, Turn 10 Studios";
                 label2.Text = "Дата выхода 2018 г.";
             }
             if (game == "Mirrors Edge")
             {
-                //labelPromoter.Text = "ИЗДАТЕЛЬ: EA DICE";
                 label2.Text = "Дата выхода 2008 г.";
             }
 
             if (game == "WITCHER")
             {
-                //labelPromoter.Text = "ИЗДАТЕЛЬ:  CD PROJEKT RED";
                 label2.Text = "Дата выхода 2018 г.";
             }
-
-
             if (game == "CALL of DUTY WTR")
             {
-                //labelPromoter.Text = "ИЗДАТЕЛЬ:  CD PROJEKT RED";
                 label2.Text = "Дата выхода 2008 г.";
             }
 
             if (game == "CALL of DUTY")
             {
-                //labelPromoter.Text = "ИЗДАТЕЛЬ:  CD PROJEKT RED";
                 label2.Text = "Дата выхода 2018 г.";
             }
             if (game == "L.A Noire")
             {
-                //labelPromoter.Text = "ИЗДАТЕЛЬ:  Rockstar games";
                 label2.Text = "Дата выхода 8 ноя.2011 г.";
             }
-
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
